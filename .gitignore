@@ -1,0 +1,16 @@
+node_modules/
+.next/
+dist/
+.desktop-build/
+desktop-release/
+desktop/icon.png
+coverage/
+.pi-subagents/
+tmp/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db

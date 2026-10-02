@@ -1,0 +1,231 @@
+.settings {
+  margin: 0 0 14px;
+  border: 1px solid #dce6e0;
+  border-radius: 11px;
+  background: #f7faf8;
+  color: #38594f;
+}
+
+.settings summary {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 11px;
+  font-size: 14px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.settings summary::marker {
+  color: #698078;
+}
+
+.settings summary b {
+  flex: 0 0 auto;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #e5eee9;
+  color: #41685a;
+  font-size: 12px;
+}
+
+.settings summary b[data-desktop-alert-status="blocked"],
+.settings summary b[data-desktop-alert-status="unavailable"],
+.settings summary b[data-desktop-alert-status="paused"] {
+  background: #f4e9e5;
+  color: #785149;
+}
+
+.settings summary:focus-visible,
+.action:focus-visible {
+  outline: 3px solid rgba(78, 143, 121, 0.32);
+  outline-offset: 2px;
+}
+
+.content {
+  display: grid;
+  gap: 8px;
+  padding: 0 11px 12px;
+  overflow-wrap: anywhere;
+}
+
+.content p {
+  margin: 0;
+  color: #62756d;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.content .notice {
+  color: #5b6f67;
+}
+
+.action {
+  min-height: 44px;
+  justify-self: start;
+  padding: 0 13px;
+  border: 1px solid #b7cec3;
+  border-radius: 9px;
+  background: #fff;
+  color: #315c50;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.action:hover:not(:disabled) {
+  border-color: #78aa98;
+  background: #edf5f1;
+}
+
+.action:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.action:disabled[aria-busy="true"] {
+  cursor: wait;
+}
+
+.content .message {
+  color: #795b26;
+}
+
+.projects {
+  min-width: 0;
+  margin: 4px 0 0;
+  padding: 11px;
+  border: 1px solid #dce6e0;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.projects legend {
+  padding: 0 5px;
+  color: #38594f;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.projects > p {
+  margin-bottom: 9px;
+}
+
+.projects > .retentionNote {
+  margin: 9px 0 0;
+}
+
+.projectList {
+  display: grid;
+  gap: 2px;
+}
+
+.project {
+  display: flex;
+  min-width: 0;
+  min-height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 5px 2px;
+  color: #38594f;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.project + .project {
+  border-top: 1px solid #edf2ef;
+}
+
+.project span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.project input {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  margin: 0;
+  accent-color: #4f927b;
+  cursor: pointer;
+}
+
+.project input:disabled {
+  cursor: wait;
+  opacity: 0.58;
+}
+
+.project input:focus-visible {
+  outline: 3px solid #4e8f79;
+  outline-offset: 2px;
+}
+
+.reset {
+  min-height: 44px;
+  margin-top: 10px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #526f65;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.resetConfirmation {
+  display: grid;
+  gap: 9px;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f7f2e9;
+}
+
+.resetConfirmation > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.resetConfirmation button {
+  min-height: 44px;
+  padding: 0 11px;
+  border: 1px solid #c8d8d0;
+  border-radius: 8px;
+  background: #fff;
+  color: #38594f;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.reset:disabled,
+.resetConfirmation button:disabled {
+  cursor: wait;
+  opacity: 0.58;
+}
+
+.reset:focus-visible,
+.resetConfirmation button:focus-visible {
+  outline: 3px solid #4e8f79;
+  outline-offset: 2px;
+}
+
+.srStatus {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

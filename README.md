@@ -9,6 +9,8 @@ Coffice is a playful desktop companion. It reads local task metadata and gives
 it a place to live. The animation is for fun; the status labels tell you what
 Coffice actually knows.
 
+![The Coffice demo office, with six agents and a sleeping cat](docs/images/coffice-desktop.png)
+
 ## Open the office
 
 Download the Windows x64 application from

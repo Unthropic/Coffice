@@ -4,6 +4,11 @@ Coffice ships only reviewed runtime assets. Source artwork, references, prompts,
 rejected candidates, proofs, and working files remain outside the product
 repository.
 
+The README screenshot in `docs/images/coffice-desktop.png` shows the fictional
+demo office, not real projects or conversations. It combines Coffice's original
+scene illustration with the production character artwork listed below. Sharing
+this unmodified product screenshot is covered by the artwork license.
+
 The distributed character artwork is original to Coffice. Each promoted PNG is
 an RGBA production file with fixed dimensions, stripped metadata, and a pinned
 hash. The strict-overhead sheets share one six-character identity order and

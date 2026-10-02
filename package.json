@@ -1,0 +1,66 @@
+{
+  "name": "coffice",
+  "version": "1.0.0-rc.2",
+  "description": "A little desktop office where your Codex agents come to life.",
+  "main": "desktop/main.cjs",
+  "private": true,
+  "license": "Apache-2.0",
+  "author": "orangepropeller",
+  "homepage": "https://github.com/Unthropic/Coffice#readme",
+  "bugs": {
+    "url": "https://github.com/Unthropic/Coffice/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Unthropic/Coffice.git"
+  },
+  "packageManager": "npm@11.9.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 3003",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1 --port 3003",
+    "desktop:prepare": "npm run build && node scripts/prepare-desktop.mjs",
+    "desktop": "install-electron && electron .",
+    "desktop:pack": "electron-builder --config desktop/electron-builder.json --win --x64",
+    "desktop:build": "npm run desktop:prepare && npm run desktop:pack",
+    "verify:desktop": "node scripts/verify-desktop.mjs",
+    "verify:companion": "node scripts/verify-companion.mjs",
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --maxWorkers=1",
+    "verify:ui": "node scripts/verify-browser-ui.mjs",
+    "verify:pointer-alignment": "node scripts/verify-pointer-alignment.mjs",
+    "verify:assets": "node scripts/verify-assets.mjs",
+    "verify:boundary": "node scripts/verify-public-boundary.mjs",
+    "verify:release": "node scripts/verify-release.mjs",
+    "format": "prettier --check ."
+  },
+  "dependencies": {
+    "next": "^16.3.8",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@eslint/eslintrc": "3.3.6",
+    "@types/node": "26.2.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "electron": "44.5.1",
+    "electron-builder": "26.15.3",
+    "eslint": "9.39.5",
+    "eslint-config-next": "^16.3.8",
+    "happy-dom": "^20.11.2",
+    "playwright-core": "^1.62.1",
+    "prettier": "3.9.6",
+    "typescript": "6.0.3",
+    "vitest": "4.1.11"
+  },
+  "overrides": {
+    "postcss": "8.5.26",
+    "sharp": "0.35.5"
+  }
+}

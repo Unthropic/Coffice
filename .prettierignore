@@ -1,0 +1,8 @@
+.next
+node_modules
+coverage
+.desktop-build
+desktop-release
+package-lock.json
+# Binding product documents are user-authored source material, not generated code.
+docs/product-spec.md

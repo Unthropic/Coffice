@@ -1,0 +1,25 @@
+{
+  "appId": "com.orangepropeller.coffice",
+  "productName": "Coffice",
+  "directories": { "output": "desktop-release" },
+  "files": [
+    "desktop/main.cjs",
+    "desktop/server.cjs",
+    "desktop/loading.html",
+    "desktop/error.html",
+    "desktop/error.js",
+    "desktop/icon.png",
+    "package.json",
+    "!node_modules/**"
+  ],
+  "afterPack": "desktop/after-pack.cjs",
+  "asar": true,
+  "npmRebuild": false,
+  "win": {
+    "target": [{ "target": "portable", "arch": ["x64"] }],
+    "icon": ".desktop-build/icon.ico",
+    "signExecutable": false,
+    "artifactName": "Coffice-${version}-Windows-x64.${ext}"
+  },
+  "portable": { "requestExecutionLevel": "user" }
+}

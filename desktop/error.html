@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; img-src 'self'"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Coffice</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 40px;
+        background: #f5f4ec;
+        color: #284d41;
+        font:
+          16px/1.7 "Segoe UI",
+          sans-serif;
+      }
+      main {
+        max-width: 520px;
+        text-align: center;
+      }
+      img {
+        width: 72px;
+        height: 72px;
+        margin-bottom: 16px;
+      }
+      h1 {
+        font-size: 26px;
+        letter-spacing: -0.5px;
+        margin: 0 0 14px;
+      }
+      p {
+        color: #677c70;
+      }
+      small {
+        display: block;
+        margin-top: 26px;
+        color: #677c70;
+      }
+    </style>
+    <script src="error.js" defer></script>
+  </head>
+  <body>
+    <main role="alert">
+      <img src="icon.png" alt="" />
+      <h1>The office couldn’t open</h1>
+      <p id="message">Close Coffice and try again.</p>
+      <small>You can close this window using the × in the title bar.</small>
+    </main>
+  </body>
+</html>

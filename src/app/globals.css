@@ -1,0 +1,227 @@
+:root {
+  color-scheme: light;
+  font-family:
+    "Segoe UI Variable", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  font-family: inherit;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+button:focus-visible {
+  outline: 3px solid rgba(78, 143, 121, 0.34);
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+p {
+  overflow-wrap: anywhere;
+}
+
+.fatal-error-shell {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 24px;
+  background: #f3f6f2;
+  color: #20362f;
+}
+
+.fatal-error-card {
+  width: min(100%, 560px);
+  padding: clamp(24px, 5vw, 44px);
+  border: 1px solid #c9d7cf;
+  border-radius: 20px;
+  background: #fdfefc;
+  box-shadow: 0 18px 50px rgba(32, 54, 47, 0.1);
+  text-align: center;
+}
+
+.fatal-error-mark {
+  display: inline-grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+}
+
+.fatal-error-mark svg {
+  width: 36px;
+  height: 36px;
+}
+
+.fatal-error-eyebrow {
+  margin: 16px 0 6px;
+  color: #4f665c;
+  font-size: 14px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fatal-error-card h1 {
+  margin: 0;
+  font-size: clamp(24px, 5vw, 34px);
+  line-height: 1.15;
+}
+
+.fatal-error-card h1:focus {
+  outline: none;
+}
+
+.fatal-error-card > p:not(.fatal-error-eyebrow) {
+  margin: 14px auto 0;
+  max-width: 46ch;
+  color: #5f7068;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.fatal-error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.fatal-error-actions button {
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid #3c755f;
+  border-radius: 10px;
+  background: #3c755f;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.fatal-error-actions button.secondary {
+  background: #fff;
+  color: #315f4f;
+}
+
+@media (forced-colors: active) {
+  .fatal-error-card,
+  .fatal-error-actions button {
+    border: 1px solid CanvasText;
+  }
+}
+
+/* Live-source feedback shared by the campus shell. */
+.connection-state.connection-refresh-stale i {
+  background: #d6a34a;
+  animation: source-pulse 1.4s ease-in-out infinite;
+}
+
+.connection-state.connection-refresh-failed i {
+  background: #cf6559;
+  animation: none;
+}
+
+.system-notice.notice-disconnected .notice-sprite,
+.system-notice.notice-refresh-failed .notice-sprite {
+  background: #cf6559;
+  color: #fff;
+}
+
+.stale-banner i {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #d6a34a;
+}
+
+/* Current campus status treatments not duplicated by the unified surface. */
+.repo-mood.repo-breezy {
+  background: #fff4dd;
+  color: #8b692d;
+}
+
+.building-signals > .session-liveness {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: max-content;
+  min-height: 28px;
+  padding: 0 9px;
+  border-color: transparent;
+  background: #eef3ef;
+  color: #687971;
+  font:
+    600 12px/26px ui-sans-serif,
+    system-ui,
+    sans-serif;
+  white-space: nowrap;
+}
+
+.session-liveness i {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  border-radius: 50%;
+  background: #8c9a93;
+  box-shadow: 0 0 0 3px rgba(140, 154, 147, 0.13);
+}
+
+.building-signals > .session-liveness-live {
+  background: #e4f1eb;
+  color: #3c755f;
+}
+
+.session-liveness-live i {
+  background: #45a27a;
+  box-shadow: 0 0 0 3px rgba(69, 162, 122, 0.14);
+}
+
+.building-signals > .session-liveness-recent {
+  background: #fff4dd;
+  color: #8b692d;
+}
+
+.session-liveness-recent i {
+  background: #d6a34a;
+  box-shadow: 0 0 0 3px rgba(214, 163, 74, 0.14);
+}
+
+.building-signals > .session-liveness-quiet {
+  background: #eef3ef;
+  color: #687971;
+}
+
+@keyframes source-pulse {
+  50% {
+    opacity: 0.5;
+    transform: scale(0.78);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .connection-state.connection-refresh-stale i {
+    animation: none;
+  }
+}

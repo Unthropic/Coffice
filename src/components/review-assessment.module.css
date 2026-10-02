@@ -1,0 +1,171 @@
+.card {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid #dbe5df;
+  border-radius: 11px;
+  background: #f8faf8;
+  color: #29483f;
+}
+.card header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+.card header > div {
+  min-width: 0;
+}
+.card header span {
+  color: #5e7168;
+  font-size: 12px;
+  font-weight: 760;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.card h4 {
+  margin: 3px 0 0;
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+.card header b {
+  flex: 0 0 auto;
+  padding: 4px 7px;
+  border-radius: 999px;
+  background: #eaf2ed;
+  color: #4f6d63;
+  font-size: 12px;
+}
+.recorded {
+  display: grid;
+  gap: 9px;
+  padding-top: 9px;
+}
+.savedDetails summary {
+  color: #31584c;
+  font-size: 14px;
+  font-weight: 720;
+  cursor: pointer;
+}
+.savedDetails summary:focus-visible {
+  outline: 3px solid rgba(78, 143, 121, 0.3);
+  outline-offset: 3px;
+}
+.recorded strong {
+  display: block;
+  font-size: 14px;
+}
+.recorded p,
+.recorded ul {
+  margin: 3px 0 0;
+  color: #587068;
+  font-size: 14px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.recorded ul {
+  padding-left: 19px;
+}
+.actionNote {
+  color: #5e7168 !important;
+}
+.card form {
+  display: grid;
+  gap: 10px;
+}
+.card label {
+  display: grid;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 720;
+}
+.card label span {
+  color: #60736a;
+  font-weight: 520;
+}
+.card textarea,
+.card select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #cad8d0;
+  border-radius: 8px;
+  background: #fff;
+  color: #203d35;
+  font: inherit;
+  font-size: 14px;
+}
+.card textarea {
+  min-height: 62px;
+  padding: 9px 10px;
+  resize: vertical;
+  line-height: 1.4;
+}
+.card select {
+  min-height: 40px;
+  padding: 0 9px;
+}
+.card button {
+  min-height: 36px;
+  justify-self: start;
+  padding: 0 10px;
+  border: 1px solid #cfdcd5;
+  border-radius: 8px;
+  background: #fff;
+  color: #31584c;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 720;
+  cursor: pointer;
+}
+.card > button,
+.actions button:first-child {
+  border-color: #315f52;
+  background: #315f52;
+  color: #fff;
+}
+.card button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+.card button:focus-visible,
+.card textarea:focus-visible,
+.card select:focus-visible {
+  outline: 3px solid rgba(78, 143, 121, 0.3);
+  outline-offset: 2px;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.conflict,
+.locked,
+.message {
+  margin: 0;
+  padding: 9px 10px;
+  border: 1px solid #e4c89e;
+  border-radius: 8px;
+  background: #fff8ec;
+  color: #765526;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.conflict {
+  display: grid;
+  gap: 5px;
+}
+.conflict p {
+  margin: 0;
+}
+.message {
+  border-color: #d5e2da;
+  background: #f2f7f4;
+  color: #48685e;
+}
+.selfCritique {
+  margin: 0;
+  color: #60736a;
+  font-size: 12px;
+}

@@ -1,0 +1,224 @@
+.card {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid #ddd9e8;
+  border-radius: 11px;
+  background: #faf9fc;
+  color: #3f3650;
+}
+
+.card header,
+.requestTopline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card header > div,
+.requestTopline,
+.requests li {
+  min-width: 0;
+}
+
+.card header span {
+  color: #756d82;
+  font-size: 12px;
+  font-weight: 760;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.card h4 {
+  margin: 3px 0 0;
+  font-size: 15px;
+}
+
+.card header > b {
+  flex: 0 0 auto;
+  padding: 4px 7px;
+  border-radius: 999px;
+  background: #eeeaf5;
+  color: #5c4d73;
+  font-size: 12px;
+}
+
+.explanation,
+.empty,
+.locked,
+.message,
+.conflict p,
+.promptPreview {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.explanation,
+.empty {
+  color: #6c6577;
+}
+
+.requests {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.requests li {
+  display: grid;
+  gap: 7px;
+  padding: 10px;
+  border: 1px solid #e3dfeb;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.requestTopline b {
+  font-size: 14px;
+}
+
+.requestTopline time {
+  flex: 0 0 auto;
+  color: #777080;
+  font-size: 12px;
+}
+
+.requests li > p {
+  margin: 0;
+  color: #51485d;
+  font-size: 14px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.resolution {
+  display: grid;
+  gap: 3px;
+  padding-top: 6px;
+  border-top: 1px solid #ebe8f0;
+}
+
+.resolution strong {
+  font-size: 12px;
+}
+
+.rowActions,
+.formActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.card button {
+  min-height: 38px;
+  padding: 0 10px;
+  border: 1px solid #d7d0e2;
+  border-radius: 8px;
+  background: #fff;
+  color: #5a486f;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 720;
+  cursor: pointer;
+}
+
+.card > button,
+.formActions button:first-child {
+  justify-self: start;
+  border-color: #625078;
+  background: #625078;
+  color: #fff;
+}
+
+.card button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.card button:focus-visible,
+.card textarea:focus-visible,
+.history summary:focus-visible {
+  outline: 3px solid rgba(103, 82, 131, 0.28);
+  outline-offset: 2px;
+}
+
+.history summary {
+  color: #5e4d73;
+  font-size: 14px;
+  font-weight: 720;
+  cursor: pointer;
+}
+
+.history[open] summary {
+  margin-bottom: 8px;
+}
+
+.card form {
+  display: grid;
+  gap: 10px;
+}
+
+.card label {
+  display: grid;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 720;
+}
+
+.card label span {
+  color: #746c7d;
+  font-weight: 520;
+}
+
+.card textarea {
+  width: 100%;
+  min-height: 74px;
+  box-sizing: border-box;
+  padding: 9px 10px;
+  resize: vertical;
+  border: 1px solid #d5cfdf;
+  border-radius: 8px;
+  background: #fff;
+  color: #3f3650;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.conflict,
+.locked,
+.message {
+  padding: 9px 10px;
+  border: 1px solid #e4c89e;
+  border-radius: 8px;
+  background: #fff8ec;
+  color: #765526;
+}
+
+.conflict {
+  display: grid;
+  gap: 5px;
+}
+
+.message {
+  border-color: #dcd6e5;
+  background: #f4f1f7;
+  color: #5b4b6e;
+}
+
+@media (max-width: 520px) {
+  .requestTopline {
+    display: grid;
+  }
+
+  .requestTopline time {
+    flex: initial;
+  }
+}

@@ -1,4 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
+import { COFFICE_VERSION } from "../src/lib/product-version";
 
 import {
   appServerSpawnSpec,
@@ -403,7 +404,7 @@ describe("CodexAppServerManager", () => {
         clientInfo: {
           name: "coffice",
           title: "Coffice",
-          version: "1.0.0-rc.1",
+          version: COFFICE_VERSION,
         },
         capabilities: {
           experimentalApi: true,
